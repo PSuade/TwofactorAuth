@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Code</title>
+</head>
+<body>
+    <h1>Verify Code</h1>
+    {% if error %}
+    <p style="color: red;">Invalid code or code expired. Please check your email again.</p>
+    {% endif %}
+    <form action="/verify_code" method="post">
+        <label for="code">Enter the 10-digit code received in your email:</label><br>
+        <input type="text" id="code" name="code"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
